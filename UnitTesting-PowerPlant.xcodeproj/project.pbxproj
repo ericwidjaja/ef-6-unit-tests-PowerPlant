@@ -15,6 +15,7 @@
 		DF9DF3612418763700DF6DD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF9DF35F2418763700DF6DD6 /* LaunchScreen.storyboard */; };
 		DF9DF36C2418763700DF6DD6 /* UnitTesting_PowerPlantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9DF36B2418763700DF6DD6 /* UnitTesting_PowerPlantTests.swift */; };
 		DF9DF37724187A7B00DF6DD6 /* powerPlantData.json in Resources */ = {isa = PBXBuildFile; fileRef = DF9DF37624187A7B00DF6DD6 /* powerPlantData.json */; };
+		DF9DF3792419793B00DF6DD6 /* PowerPlant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9DF3782419793B00DF6DD6 /* PowerPlant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		DF9DF36B2418763700DF6DD6 /* UnitTesting_PowerPlantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTesting_PowerPlantTests.swift; sourceTree = "<group>"; };
 		DF9DF36D2418763700DF6DD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF9DF37624187A7B00DF6DD6 /* powerPlantData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = powerPlantData.json; sourceTree = "<group>"; };
+		DF9DF3782419793B00DF6DD6 /* PowerPlant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerPlant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +86,7 @@
 				DF9DF3542418763400DF6DD6 /* AppDelegate.swift */,
 				DF9DF3562418763400DF6DD6 /* SceneDelegate.swift */,
 				DF9DF3582418763400DF6DD6 /* ViewController.swift */,
-				DF9DF37624187A7B00DF6DD6 /* powerPlantData.json */,
+				DF9DF37A2419794F00DF6DD6 /* Model */,
 				DF9DF35A2418763400DF6DD6 /* Main.storyboard */,
 				DF9DF35D2418763700DF6DD6 /* Assets.xcassets */,
 				DF9DF35F2418763700DF6DD6 /* LaunchScreen.storyboard */,
@@ -100,6 +102,15 @@
 				DF9DF36D2418763700DF6DD6 /* Info.plist */,
 			);
 			path = "UnitTesting-PowerPlantTests";
+			sourceTree = "<group>";
+		};
+		DF9DF37A2419794F00DF6DD6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DF9DF3782419793B00DF6DD6 /* PowerPlant.swift */,
+				DF9DF37624187A7B00DF6DD6 /* powerPlantData.json */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +218,7 @@
 				DF9DF3592418763400DF6DD6 /* ViewController.swift in Sources */,
 				DF9DF3552418763400DF6DD6 /* AppDelegate.swift in Sources */,
 				DF9DF3572418763400DF6DD6 /* SceneDelegate.swift in Sources */,
+				DF9DF3792419793B00DF6DD6 /* PowerPlant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
