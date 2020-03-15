@@ -28,38 +28,54 @@ class UnitTesting_PowerPlantTests: XCTestCase {
         }
     }
     
-    func testLoadPowerPlantData() {
+    func testReadingDataFromJSONFile() {
+        
         // Arrange
-        let powerPlantData = getTestPlantJSONData()
+        let fileName = "powerPlantData"
+        let ext = "json"
+        
+        // sut = "System Under Test"
+        let sut = Bundle.parseJSONData(fileName: fileName, ext: ext)
+        
         
         // Act
-        var allPowerPlantRecords = [RecordsWrapper]()
         
-        do {
-            allPowerPlantRecords = try PowerPlant.getPowerPlantData()
-        } catch {
-            print(error)
-        }
-        // Assert
-        XCTAssertTrue(allPowerPlantRecords.count == 10, "Expecting 10 PowerPlant Structs, but received \(allPowerPlantRecords.count)")
+        // Asert
+        
     }
     
-    private func getTestPlantJSONData() -> Data {
-        guard let pathToData = Bundle.main.path(forResource: "powerPlantData", ofType: "json")
-            else {
-                fatalError("powerPlantData.json file not found")
-        }
-        
-        let internalURL = URL(fileURLWithPath: pathToData)
-        do {
-            let data = try Data(contentsOf: internalURL)
-            return data
-            
-        } catch {
-            fatalError("An error occured: \(error)")
-            
-        }
-    }
-    
-    
+//    func testLoadPowerPlantData() {
+//        // Arrange
+//        let powerPlantData = getTestPlantJSONData()
+//
+//        // Act
+//        var allPowerPlantRecords = [RecordsWrapper]()
+//
+//        do {
+//            allPowerPlantRecords = try PowerPlant.getPowerPlantData()
+//        } catch {
+//            print(error)
+//        }
+//        // Assert
+//        XCTAssertTrue(allPowerPlantRecords.count == 14, "Expecting 10 PowerPlant Structs, but received \(allPowerPlantRecords.count)")
+//    }
+//
+//    private func getTestPlantJSONData() -> Data {
+//        guard let pathToData = Bundle.main.path(forResource: "powerPlantData", ofType: "json")
+//            else {
+//                fatalError("powerPlantData.json file not found")
+//        }
+//
+//        let internalURL = URL(fileURLWithPath: pathToData)
+//        do {
+//            let data = try Data(contentsOf: internalURL)
+//            return data
+//
+//        } catch {
+//            fatalError("An error occured: \(error)")
+//
+//        }
+//    }
+//
+//
 }
