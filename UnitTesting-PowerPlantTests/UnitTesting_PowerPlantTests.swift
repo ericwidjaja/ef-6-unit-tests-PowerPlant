@@ -34,13 +34,11 @@ class UnitTesting_PowerPlantTests: XCTestCase {
         let fileName = "powerPlantData"
         let ext = "json"
         
-        // sut = "System Under Test"
-        let sut = Bundle.parseJSONData(fileName: fileName, ext: ext)
-        
-        
         // Act
-        
+        let data = Bundle.parseJSONData(fileName: fileName, ext: ext)
+
         // Asert
+        XCTAssertNotNil(data, "We are getting data(bytes) from \(fileName)")
         
     }
     
