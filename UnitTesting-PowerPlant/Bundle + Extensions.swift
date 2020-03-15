@@ -10,7 +10,7 @@ import Foundation
 
 extension Bundle {
     
-    static func parseJSONData(fileName: String, ext: String) -> Data {
+    static func readRawJSONData(fileName: String, ext: String) -> Data {
         
         guard let fileURL = Bundle.main.url(forResource: fileName, withExtension: ext)
             else {

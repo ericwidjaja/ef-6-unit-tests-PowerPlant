@@ -35,7 +35,7 @@ class UnitTesting_PowerPlantTests: XCTestCase {
         let ext = "json"
         
         // Act
-        let data = Bundle.parseJSONData(fileName: fileName, ext: ext)
+        let data = Bundle.readRawJSONData(fileName: fileName, ext: ext)
 
         // Asert
         XCTAssertNotNil(data, "We are getting data(bytes) from \(fileName)")
