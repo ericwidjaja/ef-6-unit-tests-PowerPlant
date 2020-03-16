@@ -39,7 +39,19 @@ class UnitTesting_PowerPlantTests: XCTestCase {
 
         // Asert
         XCTAssertNotNil(data, "We are getting data(bytes) from \(fileName)")
+    }
+    
+    func testParsingJSONDataToRecordsArray() {
+        // Arrange
+        let fileName = "powerPlantData"
+        let ext = "json"
+        let data = Bundle.readRawJSONData(fileName: fileName, ext: ext)
         
+        // Act
+        let powerPlants = PowerPlant.getPowerPlantData()
+        
+        // Assert
+        XCTAssertGreaterThan(powerPlants.count, 14, "Expected number of Power Plants: \(powerPlants.count), which is greater than 14" )
     }
     
 //    func testLoadPowerPlantData() {
