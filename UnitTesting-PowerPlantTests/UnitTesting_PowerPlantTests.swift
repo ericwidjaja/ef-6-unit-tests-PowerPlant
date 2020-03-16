@@ -51,41 +51,7 @@ class UnitTesting_PowerPlantTests: XCTestCase {
         let powerPlants = PowerPlant.getPowerPlantData()
         
         // Assert
-        XCTAssertGreaterThan(powerPlants.count, 14, "Expected number of Power Plants: \(powerPlants.count), which is greater than 14" )
+//        XCTAssertGreaterThan(powerPlants.count, 14, "Expected number of Power Plants: \(powerPlants.count), which is greater than 14" )
+        XCTAssertEqual(powerPlants.count, 14, "Expected number of Power Plants: \(powerPlants.count), which is EQUAL to 14")
     }
-    
-//    func testLoadPowerPlantData() {
-//        // Arrange
-//        let powerPlantData = getTestPlantJSONData()
-//
-//        // Act
-//        var allPowerPlantRecords = [RecordsWrapper]()
-//
-//        do {
-//            allPowerPlantRecords = try PowerPlant.getPowerPlantData()
-//        } catch {
-//            print(error)
-//        }
-//        // Assert
-//        XCTAssertTrue(allPowerPlantRecords.count == 14, "Expecting 10 PowerPlant Structs, but received \(allPowerPlantRecords.count)")
-//    }
-//
-//    private func getTestPlantJSONData() -> Data {
-//        guard let pathToData = Bundle.main.path(forResource: "powerPlantData", ofType: "json")
-//            else {
-//                fatalError("powerPlantData.json file not found")
-//        }
-//
-//        let internalURL = URL(fileURLWithPath: pathToData)
-//        do {
-//            let data = try Data(contentsOf: internalURL)
-//            return data
-//
-//        } catch {
-//            fatalError("An error occured: \(error)")
-//
-//        }
-//    }
-//
-//
 }
