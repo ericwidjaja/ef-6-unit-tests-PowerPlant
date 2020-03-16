@@ -16,18 +16,8 @@ class UnitTesting_PowerPlantTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
+    // Testing on ability to read data from JSON file
     func testReadingDataFromJSONFile() {
         
         // Arrange
@@ -41,6 +31,8 @@ class UnitTesting_PowerPlantTests: XCTestCase {
         XCTAssertNotNil(data, "We are getting data(bytes) from \(fileName)")
     }
     
+    
+    // Testing if the numbers of power plants is equal to the numbers provided in JSON file
     func testParsingJSONDataToRecordsArray() {
         // Arrange
         let fileName = "powerPlantData"
@@ -51,7 +43,6 @@ class UnitTesting_PowerPlantTests: XCTestCase {
         let powerPlants = PowerPlant.getPowerPlantData()
         
         // Assert
-//        XCTAssertGreaterThan(powerPlants.count, 14, "Expected number of Power Plants: \(powerPlants.count), which is greater than 14" )
         XCTAssertEqual(powerPlants.count, 14, "Expected number of Power Plants: \(powerPlants.count), which is EQUAL to 14")
     }
 }
