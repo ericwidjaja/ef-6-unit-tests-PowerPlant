@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,89 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UnitTesting_PowerPlant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0md-FC-z42">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationWidth="10" reuseIdentifier="powerPlantCell" rowHeight="222" id="PrA-9t-G9f" customClass="PowerPlantTableViewCell" customModule="UnitTesting_PowerPlant" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="222"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PrA-9t-G9f" id="Qf2-mV-1zh">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="222"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="PlantName" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3A-6B-Jz8">
+                                                    <rect key="frame" x="34" y="25" width="346" height="70"/>
+                                                    <color key="backgroundColor" red="0.94333755969999999" green="0.41895423700000001" blue="0.17348171949999999" alpha="0.73354559080000004" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PlantType" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCc-qB-ihI">
+                                                    <rect key="frame" x="97" y="106" width="220" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="RN3-D9-r2Q"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="XCe-tt-L27"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Coordinates" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8w-jW-duf">
+                                                    <rect key="frame" x="127" y="158" width="160" height="38"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="38" id="OoV-Xg-ngp"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="M3A-6B-Jz8" firstAttribute="height" secondItem="Qf2-mV-1zh" secondAttribute="height" multiplier="0.315315" id="5q6-lU-A5e"/>
+                                                <constraint firstItem="M3A-6B-Jz8" firstAttribute="top" secondItem="Qf2-mV-1zh" secondAttribute="topMargin" constant="14" id="9Lr-xB-Vj1"/>
+                                                <constraint firstItem="M3A-6B-Jz8" firstAttribute="centerX" secondItem="Qf2-mV-1zh" secondAttribute="centerX" id="BeU-dk-25v"/>
+                                                <constraint firstItem="mCc-qB-ihI" firstAttribute="top" secondItem="M3A-6B-Jz8" secondAttribute="bottom" constant="11" id="D6K-3Y-YSb"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="j8w-jW-duf" secondAttribute="trailing" constant="20" symbolic="YES" id="DPS-lm-d5d"/>
+                                                <constraint firstItem="M3A-6B-Jz8" firstAttribute="leading" secondItem="Qf2-mV-1zh" secondAttribute="leadingMargin" constant="14" id="FAW-WU-y7c"/>
+                                                <constraint firstItem="j8w-jW-duf" firstAttribute="top" secondItem="M3A-6B-Jz8" secondAttribute="bottom" constant="63" id="ZQa-gG-wmF"/>
+                                                <constraint firstItem="mCc-qB-ihI" firstAttribute="width" secondItem="Qf2-mV-1zh" secondAttribute="width" multiplier="0.214976" constant="131" id="bXh-gk-3Wj"/>
+                                                <constraint firstItem="mCc-qB-ihI" firstAttribute="height" secondItem="Qf2-mV-1zh" secondAttribute="height" multiplier="0.198198" id="uVA-Pd-YiS"/>
+                                                <constraint firstItem="j8w-jW-duf" firstAttribute="leading" secondItem="Qf2-mV-1zh" secondAttribute="leading" constant="127" id="vcQ-ci-zx3"/>
+                                                <constraint firstItem="mCc-qB-ihI" firstAttribute="centerX" secondItem="Qf2-mV-1zh" secondAttribute="centerX" id="wdp-KA-cW4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="powerPlantCoordinates" destination="j8w-jW-duf" id="cEJ-IT-cfo"/>
+                                            <outlet property="powerPlantName" destination="M3A-6B-Jz8" id="mkY-wh-ooh"/>
+                                            <outlet property="powerPlantType" destination="mCc-qB-ihI" id="mzJ-2j-22p"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0md-FC-z42" secondAttribute="bottom" id="8E3-Vg-hWa"/>
+                            <constraint firstItem="0md-FC-z42" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RMe-Fq-NNQ"/>
+                            <constraint firstItem="0md-FC-z42" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fJ8-Tl-3St"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0md-FC-z42" secondAttribute="trailing" id="lrg-Wt-YPo"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="powerPlantTableView" destination="0md-FC-z42" id="4X6-cR-IS1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="75.669642857142847"/>
         </scene>
     </scenes>
 </document>

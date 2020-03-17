@@ -42,6 +42,7 @@ extension PowerPlant {
             let data = try Data(contentsOf: fileURL)
             let plantData = try JSONDecoder().decode(PowerPlant.self, from: data)
             recordsData = plantData.records
+//            print(recordsData)
             
         }catch{
             fatalError("failed to loads from contents")

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DF769341241DD9B400625B73 /* Bundle + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF769340241DD9B400625B73 /* Bundle + Extensions.swift */; };
+		DF769347241FD89700625B73 /* PowerPlantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF769346241FD89700625B73 /* PowerPlantTableViewCell.swift */; };
 		DF9DF3552418763400DF6DD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9DF3542418763400DF6DD6 /* AppDelegate.swift */; };
 		DF9DF3572418763400DF6DD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9DF3562418763400DF6DD6 /* SceneDelegate.swift */; };
 		DF9DF3592418763400DF6DD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9DF3582418763400DF6DD6 /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		DF769340241DD9B400625B73 /* Bundle + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle + Extensions.swift"; sourceTree = "<group>"; };
+		DF769346241FD89700625B73 /* PowerPlantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerPlantTableViewCell.swift; sourceTree = "<group>"; };
 		DF9DF3512418763400DF6DD6 /* UnitTesting-PowerPlant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UnitTesting-PowerPlant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF9DF3542418763400DF6DD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF9DF3562418763400DF6DD6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				DF9DF3542418763400DF6DD6 /* AppDelegate.swift */,
 				DF9DF3562418763400DF6DD6 /* SceneDelegate.swift */,
 				DF9DF3582418763400DF6DD6 /* ViewController.swift */,
+				DF769346241FD89700625B73 /* PowerPlantTableViewCell.swift */,
 				DF769340241DD9B400625B73 /* Bundle + Extensions.swift */,
 				DF9DF37A2419794F00DF6DD6 /* Model */,
 				DF9DF35A2418763400DF6DD6 /* Main.storyboard */,
@@ -221,6 +224,7 @@
 				DF769341241DD9B400625B73 /* Bundle + Extensions.swift in Sources */,
 				DF9DF3592418763400DF6DD6 /* ViewController.swift in Sources */,
 				DF9DF3552418763400DF6DD6 /* AppDelegate.swift in Sources */,
+				DF769347241FD89700625B73 /* PowerPlantTableViewCell.swift in Sources */,
 				DF9DF3572418763400DF6DD6 /* SceneDelegate.swift in Sources */,
 				DF9DF3792419793B00DF6DD6 /* PowerPlant.swift in Sources */,
 			);

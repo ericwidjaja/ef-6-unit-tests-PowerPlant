@@ -45,4 +45,5 @@ class UnitTesting_PowerPlantTests: XCTestCase {
         // Assert
         XCTAssertEqual(powerPlants.count, 14, "Expected number of Power Plants: \(powerPlants.count), which is EQUAL to 14")
     }
+    
 }
