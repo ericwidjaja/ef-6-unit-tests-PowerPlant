@@ -1,10 +1,7 @@
-//
 //  Bundle + Extensions.swift
 //  UnitTesting-PowerPlant
-//
 //  Created by Eric Widjaja on 3/14/20.
 //  Copyright © 2020 EricW. All rights reserved.
-//
 
 import Foundation
 
@@ -20,15 +17,11 @@ extension Bundle {
         var data: Data!
         
         do {
-            
             data = try Data.init(contentsOf: fileURL)
             
         } catch {
             fatalError("contents not found, error: \(error)")
         }
-        
         return data
     }
 }
-
-

@@ -2,18 +2,16 @@
 //  UnitTesting-PowerPlant
 //  Created by Eric Widjaja on 3/10/20.
 //  Copyright © 2020 EricW. All rights reserved.
-//
 
 import UIKit
 
 class ViewController: UIViewController {
     
+    
     //MARK: - IBOutlet
-
     @IBOutlet weak var powerPlantTableView: UITableView!
     
     //MARK: - Internal Variables
-    
     var powerPlants = [RecordsWrapper]() {
         didSet {
             powerPlantTableView.reloadData()
@@ -23,7 +21,7 @@ class ViewController: UIViewController {
     // MARK: - Lifecycle Overrides Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-//        dump(PowerPlant.getPowerPlantData())
+        dump(PowerPlant.getPowerPlantData()) //check if all the data is loaded
         configureTableView()
         loadData()
     }
@@ -34,13 +32,11 @@ class ViewController: UIViewController {
         powerPlantTableView.delegate = self
     }
     
-    
     private func loadData() {
         powerPlants = PowerPlant.getPowerPlantData()
     }
-    
-    
 }
+
 // MARK:- UITableViewDelegate Conformance
 extension ViewController: UITableViewDelegate {
 }
@@ -62,7 +58,4 @@ extension ViewController: UITableViewDataSource {
         cell.setUpPowerPlants(with: plants)
         return cell
     }
-    
-    
 }
-
